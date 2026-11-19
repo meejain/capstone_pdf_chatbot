@@ -20,6 +20,7 @@ D = ROOT / "deliverables"
 FIG, SHOT = D / "figures", D / "screenshots"
 BLUE, PINK, INK, GREY = (11, 92, 173), (214, 36, 110), (44, 44, 44), (110, 110, 110)
 PRESENTER = "Meet Kumar Jain"
+REPO = "github.com/meejain/capstone_pdf_chatbot"
 RES = json.loads((D / "evaluation_results.json").read_text())
 A, R = RES["answers"], RES["retrieval"]
 MC_PATH = D / "model_comparison.json"
@@ -55,7 +56,7 @@ def shot(name):
 
 
 SLIDES = [
-    dict(kind="title", title="AI-Powered PDF Chatbot", presenter=PRESENTER,
+    dict(kind="title", title="AI-Powered PDF Chatbot", presenter=PRESENTER, repo=REPO,
          subtitle="An Acrobat-style \"Ask AI Assistant\" built with Retrieval-Augmented Generation",
          footer="Capstone Case Study · Agentic AI Training (Batch 3, 2026)",
          notes="Introduce the project: a chatbot to interact with PDFs in natural language, modelled on Acrobat AI Assistant."),
@@ -169,7 +170,7 @@ SLIDES = [
         "Parent-document retrieval and semantic chunking; HNSW / IVF index for millions of chunks",
         "Authentication, per-user PDF spaces, export answers to Word, streaming voice input"],
          notes="Ties to sessions 3-5: LangGraph, MCP, evaluation."),
-    dict(kind="title", title="Thank you", presenter=PRESENTER, subtitle="Demo video · Approach document · Source code (streamlit run app.py)",
+    dict(kind="title", title="Thank you", presenter=PRESENTER, repo=REPO, subtitle="Demo video · Approach document · Source code (streamlit run app.py)",
          footer="Questions?", notes="Close and take questions."),
 ]
 
@@ -257,6 +258,17 @@ def build_pptx(path):
                 r2 = p.add_run()
                 r2.text = s["presenter"]
                 r2.font.size, r2.font.bold, r2.font.color.rgb = Pt(26), True, rgb(BLUE)
+            if s.get("repo"):
+                tb = sl.shapes.add_textbox(Inches(0.8), Inches(6.25), SW - Inches(1.6), Inches(0.5))
+                p = tb.text_frame.paragraphs[0]
+                p.alignment = PP_ALIGN.CENTER
+                r1 = p.add_run()
+                r1.text = "Source code:  "
+                r1.font.size, r1.font.color.rgb = Pt(16), rgb(GREY)
+                r2 = p.add_run()
+                r2.text = s["repo"]
+                r2.font.size, r2.font.bold, r2.font.color.rgb = Pt(16), True, rgb(BLUE)
+                r2.hyperlink.address = "https://" + s["repo"]
         else:
             add_text(sl, Inches(0.5), Inches(0.3), SW - Inches(1), Inches(0.8), s["title"], 30, True, BLUE)
             top = Inches(1.25)
@@ -392,6 +404,17 @@ def build_pdf(path):
                 c.setFillColor(col(BLUE))
                 c.setFont("Helvetica-Bold", 26)
                 c.drawString(x + w1, PH / 2 - 135, t2)
+            if s.get("repo"):
+                t1, t2 = "Source code:  ", s["repo"]
+                w1, w2 = c.stringWidth(t1, "Helvetica", 16), c.stringWidth(t2, "Helvetica-Bold", 16)
+                x = (PW - w1 - w2) / 2
+                c.setFillColor(col(GREY))
+                c.setFont("Helvetica", 16)
+                c.drawString(x, PH / 2 - 175, t1)
+                c.setFillColor(col(BLUE))
+                c.setFont("Helvetica-Bold", 16)
+                c.drawString(x + w1, PH / 2 - 175, t2)
+                c.linkURL("https://" + s["repo"], (x + w1, PH / 2 - 180, x + w1 + w2, PH / 2 - 160), relative=0)
         else:
             c.setFillColor(col(BLUE))
             c.setFont("Helvetica-Bold", 30)

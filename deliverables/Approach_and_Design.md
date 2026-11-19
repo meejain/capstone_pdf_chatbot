@@ -2,6 +2,8 @@
 
 *Meet Kumar Jain · Capstone Case Study · Agentic AI Training (Batch 3, 2026)*
 
+**Source code:** <https://github.com/meejain/capstone_pdf_chatbot>
+
 ## 1. Problem and goal
 
 Organisations hold large volumes of reports, manuals, research papers and policy documents. Finding a specific

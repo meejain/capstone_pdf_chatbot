@@ -105,7 +105,10 @@ def slide_eval(res: dict) -> str:
 def slide_end() -> str:
     return """<div style="text-align:center"><div style="font-size:58px;font-weight:800;color:#0B5CAD">Thank you</div>
       <div style="font-size:24px;color:#333;margin-top:18px">Working prototype · Architecture deck · Approach document · Evaluation report</div>
-      <div style="font-size:20px;color:#666;margin-top:26px">Run it: <code>streamlit run app.py</code> &nbsp;·&nbsp; fully local &amp; private</div></div>"""
+      <div style="font-size:20px;color:#666;margin-top:26px">Run it: <code>streamlit run app.py</code> &nbsp;·&nbsp; fully local &amp; private</div>
+      <div style="width:90px;height:4px;background:#d6246e;border-radius:2px;margin:40px auto 24px"></div>
+      <div style="font-size:24px;color:#666">Source code: <b style="font-size:30px;color:#0B5CAD">github.com/meejain/capstone_pdf_chatbot</b></div>
+      <div style="font-size:22px;color:#666;margin-top:14px">Presented by <b style="color:#2c2c2c">""" + PRESENTER + """</b></div></div>"""
 
 
 def model_sentence() -> str:
