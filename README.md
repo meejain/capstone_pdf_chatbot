@@ -1,6 +1,6 @@
 # AI-Powered PDF Chatbot — Capstone Project
 
-*Author: Meet Kumar Jain · Agentic AI Training (Batch 3, 2026)*
+*Author: Meet Kumar Jain · Agentic AI Training (Batch 3, 2026)* · Source: <https://github.com/meejain/capstone_pdf_chatbot>
 
 An **Adobe Acrobat "Ask AI Assistant"–style** chatbot that lets users talk to PDF documents in natural language.
 It is a fully local **Retrieval-Augmented Generation (RAG)** system: PDFs → text → chunks → embeddings → FAISS/BM25 →

@@ -2,6 +2,8 @@
 
 *Meet Kumar Jain · Capstone Case Study · Agentic AI Training (Batch 3, 2026)*
 
+**Source code:** <https://github.com/meejain/capstone_pdf_chatbot>
+
 **In one line:** a fully local, Adobe Acrobat-style *"Ask AI Assistant"* that lets you chat with a library of
 **71 PDFs (about 2,330 pages)**, or any PDF you upload. Every answer is grounded in the documents, with **clickable
 page citations that highlight the exact passage**.
@@ -12,7 +14,7 @@ page citations that highlight the exact passage**.
 
 | # | Deliverable (as required by the case study) | File |
 |---|---|---|
-| 1 | Working prototype of the AI chatbot | `app.py` + `rag/` (Streamlit app) — run: `streamlit run app.py` |
+| 1 | Working prototype of the AI chatbot | `app.py` + `rag/` (Streamlit app) — GitHub: https://github.com/meejain/capstone_pdf_chatbot |
 | 2 | Presentation: system architecture and workflow (18 slides, with speaker notes) | `AI_PDF_Chatbot_Capstone.pptx` / `.pdf` |
 | 3 | Brief explanation of approach, models, tools and techniques | `Approach_and_Design.pdf` / `.md` |
 | 4 | Demo video (7 min 15 s, narrated) | `demo_video.mp4` — timed script: `demo_script.md` |
@@ -124,7 +126,9 @@ Question -> intent router -> condense with chat history -> hybrid retrieval (RRF
 ## 7. Try it in five minutes
 
 ```bash
-cd capstone_pdf_chatbot && source .venv/bin/activate
+git clone https://github.com/meejain/capstone_pdf_chatbot.git && cd capstone_pdf_chatbot
+python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+python scripts/download_corpus.py && python scripts/build_index.py
 ~/.lmstudio/bin/lms load gemma-3-12b-it --context-length 16384
 streamlit run app.py        # open http://localhost:8501
 ```

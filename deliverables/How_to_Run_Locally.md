@@ -22,7 +22,10 @@ never leave the machine.
 
 ## 2. One-time setup
 
+Get the code from GitHub, or unzip the submitted source-code archive:
+
 ```bash
+git clone https://github.com/meejain/capstone_pdf_chatbot.git
 cd capstone_pdf_chatbot
 python3 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
@@ -30,8 +33,8 @@ pip install -r requirements.txt
 playwright install chromium          # only needed for the automated UI test
 ```
 
-Build the document library and the search index. This step is optional if the `index/` folder is already
-present.
+Build the document library and the search index. The arXiv papers and the index are not in the repository,
+so run these once:
 
 ```bash
 python scripts/download_corpus.py         # copies the annual reports, downloads arXiv papers + NIST frameworks
