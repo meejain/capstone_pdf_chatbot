@@ -1,0 +1,20 @@
+streamlit>=1.50
+langchain>=1.0
+langchain-community>=0.4
+langchain-openai>=1.0
+langchain-huggingface>=1.0
+langchain-text-splitters>=1.0
+sentence-transformers>=5.0
+torch>=2.5
+faiss-cpu>=1.9
+rank_bm25>=0.2.2
+pypdf>=5.0
+cryptography>=42
+pymupdf>=1.24
+requests>=2.31
+# deliverable tooling (diagrams, deck, docs, demo recording, tests)
+reportlab>=4.0
+matplotlib>=3.8
+python-pptx>=1.0
+playwright>=1.45
+imageio-ffmpeg>=0.5

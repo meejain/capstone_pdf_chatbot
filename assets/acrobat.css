@@ -1,0 +1,79 @@
+/* ---------- Acrobat-like look & feel for the Streamlit app ---------- */
+:root {
+  --acro-red: #eb1000;
+  --ai-grad: linear-gradient(90deg, #e3256b 0%, #d6246e 45%, #b42fd0 100%);
+  --ai-border: linear-gradient(135deg, #f2a3c4, #c58df0);
+  --ink: #2c2c2c;
+  --muted: #6e6e6e;
+  --rail: #f5f5f5;
+}
+html, body, [class*="css"] { font-family: "Adobe Clean", "Source Sans 3", "Segoe UI", system-ui, sans-serif; }
+#MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"] { display: none !important; }
+header[data-testid="stHeader"] { display: none !important; }
+.block-container { padding: 0.6rem 1rem 0 1rem !important; max-width: 100% !important; }
+[data-testid="stAppViewContainer"] { background: #ffffff; }
+
+/* ---------- top bar ---------- */
+.st-key-topbar { border-bottom: 1px solid #e3e3e3; padding: 2px 4px 8px 4px; gap: 0.6rem; }
+.st-key-topbar .menu { display: flex; gap: 22px; font-size: 14px; color: var(--ink); margin-left: 18px; padding-left: 18px; border-left: 1px solid #ddd; }
+.st-key-topbar .menu .active { font-weight: 700; border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
+.st-key-topbar .find { color: var(--ink); font-size: 14px; margin-right: 12px; }
+.st-key-add_space button { border: none !important; background: transparent !important; font-size: 14px; color: var(--ink); }
+.st-key-share_btn button { background: #1f1f1f !important; color: #fff !important; border-radius: 20px !important; border: none !important; padding: 2px 18px !important; font-weight: 700; }
+.st-key-ask_ai button { background: var(--ai-grad) !important; color: #fff !important; border-radius: 20px !important; border: none !important; font-weight: 700; padding: 2px 16px !important; }
+.st-key-ask_ai button:hover { filter: brightness(1.07); }
+
+/* ---------- summary banner ---------- */
+.st-key-banner { background: #e7f1fd; border-radius: 0; padding: 4px 12px; margin: 0 -1rem; gap: .5rem; }
+.st-key-banner .banner-text { font-size: 14px; color: var(--ink); flex: 1; }
+.st-key-view_summary button { border: 1.5px solid #1f1f1f !important; border-radius: 18px !important; background: #fff !important; font-weight: 700; padding: 0 14px !important; min-height: 30px; }
+.st-key-close_banner button { border: none !important; background: transparent !important; }
+.st-key-banner > div:first-child { flex: 1; }
+
+/* ---------- viewer ---------- */
+.st-key-viewer_toolbar { background: var(--rail); border: 1px solid #e6e6e6; border-radius: 8px; padding: 4px 8px; gap: .4rem; }
+.st-key-viewer_toolbar .pageno { font-size: 14px; padding: 0 6px; color: var(--ink); white-space: nowrap; }
+.st-key-page_canvas { background: #eeeeee; border-radius: 6px; padding: 16px 28px; }
+.st-key-page_canvas img { box-shadow: 0 2px 10px rgba(0,0,0,.18); background: #fff; }
+.hl-note { font-size: 13px; color: #6a4b00; background: #fff4cc; border-radius: 6px; padding: 4px 10px; margin-bottom: 8px; display: inline-block; }
+
+/* ---------- AI assistant panel ---------- */
+.st-key-ai_panel { border-left: 1px solid #e3e3e3; padding-left: 14px; height: 100%; }
+.st-key-ai_header { gap: .3rem; }
+.st-key-ai_header .ai-title { font-weight: 800; font-size: 17px; color: var(--ink); }
+.st-key-ai_header .shield { font-size: 14px; }
+.st-key-close_ai button, .st-key-add_files button, .st-key-more_menu button { border: none !important; background: transparent !important; color: var(--ink); }
+.hello { font-size: 21px; color: var(--ink); margin: 40px 0 18px 2px; }
+.hello .sparkle { font-size: 22px; background: var(--ai-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+[class*="st-key-card_"] button {
+  min-height: 82px; border-radius: 12px !important; background: #fff !important; text-align: center;
+  border: 1.5px solid #f0b4cf !important; box-shadow: 0 1px 4px rgba(214,36,110,.10); color: var(--ink) !important; font-size: 14px;
+}
+[class*="st-key-card_"] button:hover { border-color: #c043d6 !important; box-shadow: 0 2px 10px rgba(180,47,208,.20); }
+
+.user-bubble { background: #f1f1f1; border-radius: 14px 14px 2px 14px; padding: 8px 14px; margin: 10px 0 8px auto; max-width: 85%; width: fit-content; font-size: 15px; }
+.ai-label { font-weight: 700; font-size: 13px; background: var(--ai-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 6px; }
+.cite { display: inline-block; min-width: 18px; height: 18px; line-height: 18px; text-align: center; font-size: 11px; font-weight: 700;
+        border-radius: 9px; background: #efe4fb; color: #6c2bb5; margin: 0 1px; vertical-align: 1px; }
+.src-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+[class*="st-key-cite_"] button { border-radius: 14px !important; border: 1px solid #d9c3f3 !important; background: #faf5ff !important;
+        color: #5a2a99 !important; font-size: 12px !important; min-height: 26px; padding: 0 10px !important; }
+[class*="st-key-fu_"] button { color: #5a2a99 !important; font-size: 13.5px; text-align: left; }
+[class*="st-key-answer_"] { border-bottom: 1px solid #f0f0f0; padding-bottom: 6px; }
+
+/* chat input with the AI gradient border */
+[data-testid="stChatInput"] { border-radius: 12px !important; border: 1.5px solid transparent !important;
+  background: linear-gradient(#fff, #fff) padding-box, var(--ai-border) border-box !important; }
+[data-testid="stChatInput"] textarea { min-height: 64px; }
+.disclaimer { font-size: 11px; color: var(--muted); margin-top: 6px; }
+[class*="st-key-fus_"] button { min-height: 28px !important; padding: 0 !important; }
+[class*="st-key-scope_"] button[kind*="Active"], [class*="st-key-scope_"] [data-testid*="Active"] {
+  color: #6c2bb5 !important; border-color: #b42fd0 !important; background: #faf5ff !important; }
+.llm-status { font-size: 11px; margin-left: 6px; padding: 1px 8px; border-radius: 10px; }
+.llm-status.on { color: #1e7b45; background: #e6f6ec; }
+.llm-status.off { color: #b3261e; background: #fde7e7; }
+.st-key-more_menu, .st-key-add_files { min-width: 0; }
+[data-testid="stPopoverBody"] { min-width: 380px; }
+.model-badge { display:inline-block; font-size:12px; font-weight:700; color:#5a2a99; background:#efe4fb;
+  border-radius:10px; padding:2px 10px; margin-bottom:6px; }
+.st-key-model_row { gap: .6rem; }

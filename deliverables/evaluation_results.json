@@ -1,0 +1,328 @@
+{
+  "corpus": {
+    "pdfs": 71,
+    "pages": 2340,
+    "chunks": 9834
+  },
+  "retrieval": {
+    "Dense only (FAISS)": {
+      "hit@1": 0.879,
+      "hit@6": 0.939,
+      "mrr": 0.904,
+      "avg_ms": 18
+    },
+    "Hybrid (FAISS + BM25, RRF)": {
+      "hit@1": 0.879,
+      "hit@6": 0.939,
+      "mrr": 0.904,
+      "avg_ms": 25
+    },
+    "Dense + re-rank": {
+      "hit@1": 0.909,
+      "hit@6": 0.939,
+      "mrr": 0.919,
+      "avg_ms": 114
+    },
+    "Hybrid + re-rank (default)": {
+      "hit@1": 0.939,
+      "hit@6": 0.97,
+      "mrr": 0.949,
+      "avg_ms": 57
+    }
+  },
+  "answers": {
+    "accuracy": 1.0,
+    "citation_rate": 1.0,
+    "avg_seconds": 4.7,
+    "refusal_rate": 1.0,
+    "rows": [
+      {
+        "question": "How many days of paid annual leave do full-time employees get?",
+        "document": "Employee Leave Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 5.6,
+        "answer": "Full-time employees accrue **24** days of paid annual leave per calendar year [1].\n\nHere's a breakdown:\n\n*   Employees accrue **2** days of leave per completed month of service [1].\n*   Part-time employees accrue leave on a pro-rata basis [1].\n*   A maximum of **10** unused annual-leave days may be carried forward into the next calendar year [1]."
+      },
+      {
+        "question": "How many unused annual leave days can be carried forward?",
+        "document": "Employee Leave Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 1.5,
+        "answer": "A maximum of **10** unused annual leave days may be carried forward into the next calendar year [1]. These carried-forward days must be used by March 31st, after which they lapse [1]."
+      },
+      {
+        "question": "How long is parental leave for non-birthing parents?",
+        "document": "Employee Leave Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.7,
+        "answer": "Non-birthing parents (including adoptive parents) are entitled to **12 weeks** of fully paid parental leave, which may be taken in up to two blocks within 12 months of the child's arrival [1].\n\nHere\u2019s a summary:\n\n*   Non-birthing parents receive **12 weeks** of fully paid parental leave [1].\n*   This leave can be split into up to two blocks within 12 months [1]."
+      },
+      {
+        "question": "Which day is the company-wide anchor day for office attendance?",
+        "document": "Remote and Hybrid Work Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.6,
+        "answer": "Tuesday is designated as the company-wide 'anchor day' when all teams are expected on site [1].\n\nHere\u2019s a summary of related details from the document:\n\n*   Veridian Systems operates under a hybrid-first model [1].\n*   The default arrangement requires a minimum of **2** in-office days per week for office-eligible roles [1].\n*   Employees must be available during core hours of 10:00 to 15:00 in the"
+      },
+      {
+        "question": "What setup stipend do fully remote employees receive?",
+        "document": "Remote and Hybrid Work Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.0,
+        "answer": "Fully remote employees receive a one-time home office setup stipend of **USD 1,000** [1].\n\nHere's a breakdown:\n\n*   This is in addition to a monthly internet and utilities allowance of **USD 50** [1]."
+      },
+      {
+        "question": "Which flight class can I book for a 7 hour flight?",
+        "document": "Travel and Expense Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.1,
+        "answer": "You are permitted to book premium economy for a **7-hour** flight [1].\n\nHere's a breakdown of the flight class policy:\n*   Economy class is mandatory for flights shorter than **6 hours** [1].\n*   Premium economy is permitted for flights between **6 and 10 hours** [1].\n*   Business class is permitted only for flights longer than **10 hours** or with VP approval [1]."
+      },
+      {
+        "question": "What is the maximum hotel rate per night in Tier 1 cities?",
+        "document": "Travel and Expense Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 2.9,
+        "answer": "The maximum hotel rate per night in Tier 1 cities is **USD 300** [1].\n\nHere's a breakdown of related information from the document:\n\n*   Tier 1 cities include New York, London, and Singapore [1].\n*   The meal per diem for Tier 1 cities is **USD 90** [1].\n*   Alcohol is not reimbursable unless it\u2019s part of an approved client entertainment event [1]."
+      },
+      {
+        "question": "Within how many days must expense claims be submitted in Concur?",
+        "document": "Travel and Expense Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.2,
+        "answer": "Expense claims must be submitted in Concur within **30 days** of the expense date [1].\n\nHere's a breakdown:\n\n*   Claims older than **90 days** will not be reimbursed [1].\n*   Approved claims are paid in the next payroll cycle [1]."
+      },
+      {
+        "question": "Up to what value can employees accept gifts without declaring them?",
+        "document": "Code of Business Conduct",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.7,
+        "answer": "Employees may accept gifts or hospitality with a value up to **USD 100** per giver per year [1].\n\nHere's a breakdown of the relevant details:\n\n*   Gifts and hospitality up to USD 100 are acceptable.\n*   Anything above this amount must be declared in the Gifts Register [1].\n*   Cash or cash equivalents (gift cards) may never be accepted [1]."
+      },
+      {
+        "question": "What is the minimum password length?",
+        "document": "Information Security Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.6,
+        "answer": "The minimum password length is **14 characters** [1]. \n\nHere\u2019s a summary of related information from the document:\n\n*   Passwords are not force-rotated unless a compromise is suspected [1].\n*   Multi-factor authentication (MFA) is mandatory for all systems, and hardware security keys (FIDO2) are required for administrators [1]."
+      },
+      {
+        "question": "How quickly must critical vulnerabilities be patched?",
+        "document": "Information Security Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.1,
+        "answer": "Critical vulnerabilities (CVSS **9.0** or above) must be patched within **72 hours** [1].\n\nHere's a breakdown of the patching timelines outlined in the document:\n*   Critical vulnerabilities (CVSS 9.0 or above): Patched within 72 hours [1]\n*   High vulnerabilities: Patched within 14 days [1]\n*   Medium vulnerabilities: Patched within 30 days [1]"
+      },
+      {
+        "question": "How long is CCTV footage retained?",
+        "document": "Data Privacy and Retention Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 2.4,
+        "answer": "CCTV footage is retained for **30 days** [1].\n\nHere's a breakdown of the retention period:\n*   CCTV footage: **30 days** [1]"
+      },
+      {
+        "question": "Who founded Veridian Systems?",
+        "document": "Employee Onboarding Handbook",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.6,
+        "answer": "Veridian Systems was founded in **2012** by Maya Raghunathan and Daniel Okafor [1].\n\nHere's some additional information from the document:\n\n*   The company is located in Austin, Texas [1].\n*   As of the document\u2019s creation, Veridian employs approximately **4,800** people [1]."
+      },
+      {
+        "question": "How long is the probation period for new employees?",
+        "document": "Employee Onboarding Handbook",
+        "correct": true,
+        "cited": true,
+        "seconds": 2.0,
+        "answer": "New employees serve a **90-day** probation period [1].\n\nHere's a breakdown of related information:\n\n*   A formal probation review takes place in week 12 [1].\n*   The document is owned by People Operations and became effective on January 1, 2026 [2]."
+      },
+      {
+        "question": "What is the 401(k) matching formula?",
+        "document": "Employee Benefits Guide 2026",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.9,
+        "answer": "US employees receive a **100%** match on the first **4%** of salary plus **50%** on the next **2%** [1].\n\nHere's a breakdown of the 401(k) matching:\n*   **100%** match on the first **4%** of salary.\n*   **50%** match on the next **2%**."
+      },
+      {
+        "question": "What is the response time for a SEV-1 security incident?",
+        "document": "Incident Response Runbook",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.6,
+        "answer": "The response time for a SEV-1 security incident is **15 minutes** [1].\n\nHere's a breakdown of related details:\n\n*   A SEV-1 incident is defined as an active breach or full outage of Veridian Cloud [1].\n*   Updates for SEV-1 incidents must occur every 30 minutes [1]."
+      },
+      {
+        "question": "How many quotes are needed for a USD 50,000 purchase?",
+        "document": "Procurement and Vendor Management Policy",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.6,
+        "answer": "For purchases between **USD 10,001 and USD 100,000**, three competitive quotes are required [1].\n\nHere's a breakdown of the requirements based on purchase value:\n*   Up to USD 10,000: 1 quote, manager approval [1]\n*   USD 10,001 - USD 100,000: 3 competitive quotes, department head approval [1]\n*   Above USD 100,000: Formal RFP, Procurement Committee and CFO approval [1]"
+      },
+      {
+        "question": "How often should the AeroBrew X1 be descaled?",
+        "document": "AeroBrew X1 Smart Coffee Machine User Manual",
+        "correct": true,
+        "cited": true,
+        "seconds": 5.0,
+        "answer": "The AeroBrew X1 should be descaled every **3 months**, or when the orange descaling light turns on [1].\n\nHere's a breakdown of the descaling process:\n\n*   Use **100 ml** of AeroBrew descaling solution mixed with **500 ml** of water [1].\n*   Place a **1-litre container** under the spout [1].\n*   Hold the CLEAN and STEAM buttons together for **5 seconds** [1].\n*   The cycle takes approximately **25 "
+      },
+      {
+        "question": "What does error code E05 mean on the coffee machine?",
+        "document": "AeroBrew X1 Smart Coffee Machine User Manual",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.9,
+        "answer": "Error code **E05** indicates that the grinder is blocked [1].\n\nHere's a breakdown of what this means:\n\n*   The error code **E05** specifically signals a \"Grinder blocked\" issue [1].\n*   To resolve this, you should switch off the machine and clean the burr with the supplied brush [1]."
+      },
+      {
+        "question": "How long does the SkyNote Pro 11 take to charge fully?",
+        "document": "SkyNote Pro 11 Tablet Quick Start Guide",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.9,
+        "answer": "The SkyNote Pro 11 tablet takes approximately **95 minutes** to charge from 0% to 100% [1].\n\nHere's a breakdown of charging details:\n\n*   It uses a **45 W** USB-C fast charger [1].\n*   Charging time is about **95 minutes** with the included charger [1]."
+      },
+      {
+        "question": "What is the MPPT voltage range of the SolarGrid inverter?",
+        "document": "SolarGrid 5kW Hybrid Inverter Installation Manual",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.9,
+        "answer": "The MPPT voltage range for the SolarGrid inverter is **120 - 500 V DC** [1].\n\nHere's a summary of related technical data:\n\n*   Rated AC output: **5,000 W** [1]\n*   Max PV input power: **6,500 W** [1]\n*   Number of MPPT trackers: **2** [1]\n*   Battery voltage: **48 V** (LiFePO4 recommended) [1]\n*   Peak efficiency: **97.6%** [1]"
+      },
+      {
+        "question": "What is the API rate limit for the Enterprise plan?",
+        "document": "Veridian Cloud API Developer Guide v3",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.9,
+        "answer": "The Enterprise plan has a rate limit of **6,000** requests per minute and a burst of **1,000** [1].\n\nHere's a breakdown of the rate limits across different plans:\n\n| Plan        | Requests per Minute | Burst |\n|-------------|---------------------|-------|\n| Free        | 60                  | 10    |\n| Team        | 600                 | 100   |\n| Enterprise  | 6,000               | 1,000 |"
+      },
+      {
+        "question": "What was Veridian's revenue in Q2 FY2026?",
+        "document": "Veridian QBR Q2 FY2026",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.1,
+        "answer": "Veridian\u2019s revenue in Q2 FY2026 was **USD 438 million** [1]. Here are some additional details from the document:\n\n*   Revenue increased by **20%** year-over-year [1].\n*   Cloud revenue reached **USD 321 million** [1].\n*   The launch of Veridian AI Studio contributed **USD 19 million** in new bookings [1]."
+      },
+      {
+        "question": "What was the Net Promoter Score in the 2025 customer survey?",
+        "document": "Veridian Customer Satisfaction Survey 2025",
+        "correct": true,
+        "cited": true,
+        "seconds": 7.4,
+        "answer": "The Net Promoter Score (NPS) in the 2025 customer survey was **+47** [1].\n\nHere's a summary of key results from the document:\n\n*   The survey was sent to **9,400 users** across **1,150 customer accounts** [1].\n*   A total of **2,318 responses** were received, resulting in a **24.7% response rate** [1].\n*   Here's a comparison of key metrics between 2024 and 2025:\n\n| Metric                  | 2025 "
+      },
+      {
+        "question": "When will API v2 be retired?",
+        "document": "Veridian Product Roadmap 2026",
+        "correct": true,
+        "cited": true,
+        "seconds": 2.1,
+        "answer": "API v2 will be retired on **30 September 2026** [1]. Customers must migrate to API v3 before that date [1]."
+      },
+      {
+        "question": "What is the recovery time objective for tier-1 services?",
+        "document": "Business Continuity and Disaster Recovery Plan",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.0,
+        "answer": "The Recovery Time Objective (RTO) for tier-1 services is **1 hour** [1].\n\nHere's a breakdown of related details:\n\n*   Tier-1 services include the Veridian Cloud control plane and query engine [1].\n*   The Recovery Point Objective (RPO) for tier-1 services is **5 minutes** [1].\n*   Tier-2 internal systems have an RTO of **8 hours** and an RPO of **24 hours** [1]."
+      },
+      {
+        "question": "What is the P1 initial response time on the Premium support plan?",
+        "document": "Veridian Support SLA and Escalation Guide",
+        "correct": true,
+        "cited": true,
+        "seconds": 3.4,
+        "answer": "The initial response target for Priority 1 (Critical) issues on the Premium support plan is **1 hour** [1].\n\nHere's a breakdown of the relevant details:\n\n*   Support Plans and Initial Response Targets are outlined in the document [1].\n*   Premium support has an initial response time of 1 hour for P1 - Critical issues [1]."
+      },
+      {
+        "question": "What are the four core functions of the NIST AI Risk Management Framework?",
+        "document": "NIST AI RMF 1.0",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.9,
+        "answer": "The four core functions of the NIST AI Risk Management Framework are GOVERN, MAP, MEASURE, and MANAGE [2]. These functions help organizations address the risks of AI systems in practice [1]. Governance is designed to inform and be infused throughout the other three functions [2]."
+      },
+      {
+        "question": "Which retriever does the original RAG paper use?",
+        "document": "RAG - Retrieval-Augmented Generation for Knowledge-Intensive NLP",
+        "correct": true,
+        "cited": true,
+        "seconds": 7.1,
+        "answer": "The original RAG paper uses DPR's retriever [1]. Specifically, it is initialized using DPR\u2019s retriever, which utilizes retrieval supervision on Natural Questions and TriviaQA [1].\n\n\n\nHere's a breakdown of supporting details:\n\n*   RAG's retriever is initialized using **DPR\u2019s retriever** [1].\n*   DPR uses a **BERT-based \u201ccrossencoder\u201d to re-rank documents** [1]."
+      },
+      {
+        "question": "How many parallel attention heads does the base Transformer use?",
+        "document": "Attention Is All You Need",
+        "correct": true,
+        "cited": true,
+        "seconds": 6.4,
+        "answer": "The base Transformer uses **8** parallel attention layers, or heads [1]. \n\nHere's a breakdown:\n\n*   Multi-head attention allows the model to jointly attend to information from different representation subspaces [1].\n*   The document states that they employ h = **8** parallel attention layers, or heads [1].\n*   For each of these heads, dk = dv = dmodel/h = 64 [1]."
+      },
+      {
+        "question": "What was Adobe's total revenue in fiscal year 2023?",
+        "document": "Adobe Form 10-K FY2023",
+        "correct": true,
+        "cited": true,
+        "seconds": 11.7,
+        "answer": "Adobe\u2019s total revenue in fiscal year 2023 was **$19,409 million** [1].\n\nHere\u2019s a breakdown of the revenue figures:\n\n*   Subscription revenue: **$18,284 million** [1]\n*   Product revenue: **$460 million** [1]\n*   Services and other revenue: **$665 million** [1]\n\n\n\nA table comparing total revenue across three years is shown below:\n\n| Year | Total Revenue (in millions) |\n|---|---|\n| 2023 | $19,409 |\n"
+      },
+      {
+        "question": "What sliding window size does Mistral 7B use?",
+        "document": "Mistral 7B",
+        "correct": true,
+        "cited": true,
+        "seconds": 16.1,
+        "answer": "Mistral 7B uses a sliding window size of **4096** [1].\n\nHere's a breakdown:\n\n*   The document states that Mistral 7B utilizes Sliding Window Attention (SWA) with a window size of W = 4096 [1].\n*   With this window size, the theoretical attention span is approximately **131K** tokens [1]."
+      },
+      {
+        "question": "What is the Speak-Up Hotline and how can it be reached?",
+        "document": "Code of Business Conduct",
+        "correct": true,
+        "cited": true,
+        "seconds": 4.4,
+        "answer": "The Speak-Up Hotline allows concerns to be raised confidentially and anonymously [1]. It is operated by an independent third party and is available 24x7 in **14 languages** at speakup.veridian.example or by phone [1].\n\nHere's additional information from the document:\n*   Retaliation against anyone raising a concern in good faith is a dismissible offence [1]."
+      }
+    ],
+    "refusals": [
+      {
+        "question": "What was Apple's revenue in fiscal 2023?",
+        "refused": true,
+        "answer": "I couldn't find that in the selected document(s). The documents contain information about Adobe\u2019s revenue, including Digital Media, Digital Experience, and Publishing and Advertising segments, as well as geographic revenue distribution and subscription revenue. They also detail financial metrics lik",
+        "self_correction": null
+      },
+      {
+        "question": "What is the parental leave policy at Veridian's competitor, Contoso?",
+        "refused": true,
+        "answer": "I couldn't find that in the selected document(s). The documents detail Veridian Systems Inc.'s employee leave policies, including annual leave, sick leave, parental leave, bereavement leave, marriage leave, volunteering leave, jury/civic duty leave, sabbatical, and public holidays. There is no infor",
+        "self_correction": null
+      },
+      {
+        "question": "Who won the 2022 FIFA World Cup?",
+        "refused": true,
+        "answer": "I couldn't find that in the selected document(s).\n\nThe documents discuss AI advancements, Google's mission, and challenges faced in 2022. They also mention Ronaldinho winning two FIFA World Player of the Year awards and a Ballon d\u2019Or, but do not specify who won the **2022** FIFA World Cup.",
+        "self_correction": {
+          "rewritten_query": "FIFA World Cup 2022 winner results tournament outcome champion performance analysis",
+          "new_best_score": -4.289
+        }
+      }
+    ]
+  }
+}

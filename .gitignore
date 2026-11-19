@@ -1,0 +1,19 @@
+# environment & caches
+.venv/
+.hf_cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# generated / rebuildable
+index/
+
+# personal uploads made through the app
+data/pdfs/uploads/
+
+# third-party arXiv papers: re-download with `python scripts/download_corpus.py`
+data/pdfs/research/
+
+# temporary render artefacts
+deliverables/_*.html
